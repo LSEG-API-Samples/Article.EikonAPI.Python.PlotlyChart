@@ -1,0 +1,5 @@
+.vscode/
+internal_dev/
+notebook/credential.cfg
+notebook/.ipynb_checkpoints/
+notebook/internal_dev/
