@@ -47,8 +47,8 @@ If you are not familiar with Eikon Data API or Python, the following resources a
 This example requires the following dependencies software and libraries.
 1. Refinitiv Eikon or Refinitiv Workspace application with access to Eikon Data APIs.
 2. Python [Anaconda](https://www.anaconda.com/distribution/) or [MiniConda](https://docs.conda.io/en/latest/miniconda.html) distribution/package manager.
-4. [Classic Jupyter Notebook Application](https://jupyter.readthedocs.io/en/latest/install/notebook-classic.html) (Not JupyterLab!)
-3. Internet connection.
+3. [Classic Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install/notebook-classic.html) or [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) applications
+4. Internet connection.
 
 *Note:* 
 - This Project has been qualified with Python version 3.8.8 and Conda version 4.10.1
@@ -58,10 +58,11 @@ Please contact your Refinitiv's representative to help you to access Refinitiv W
 ## <a id="application_files"></a>Application Files
 This example project contains the following files and folders
 1. *notebook/plotly_dapi.ipynb*: The example Classic Jupyter Notebook application file.
-2. *requirements.txt*: The project dependencies configuration file.
-3. *images*: Project images folder.
-4. *LICENSE.md*: Project's license file.
-5. *README.md*: Project's README file.
+2. *notebook/jupyterlab_plotly_dapi.ipynb*: The example JupyterLap application file.
+3. *requirements.txt*: The project dependencies configuration file.
+4. *images*: Project images folder.
+5. *LICENSE.md*: Project's license file.
+6. *README.md*: Project's README file.
 
 ## <a id="eikon_setup"></a>Eikon Data API Setup
 
@@ -69,7 +70,7 @@ Please follow a step-by-step guide to set up your Eikon Data API and your AppKey
 
 Please note that you can also create your Appkey via [AppKey Generator website](https://amers1.apps.cp.thomsonreuters.com/apps/AppkeyGenerator).
 
-## <a id="running"></a>How to run this example
+## <a id="running_notebook"></a>How to run this example with the Classic Jupyter Notebook
 
 Please note that the Refinitiv Workspace/Eikon application integrates a Data API proxy that acts as an interface between the Eikon Data API Python library and the Eikon Data Platform. For this reason, the Refinitiv Workspace/Eikon application must be running when you use the Eikon Data API Python library.
 
@@ -109,19 +110,27 @@ The first step is to unzip or download the example project folder into a directo
 
     ![Figure-4](images/notebook_plotly.png "Open the Notebook application")
 
+## <a id="running_jupyterlab"></a>How to run this example with the JupyterLab
+
+Please refer to [Plotly Python - JupyterLab Support](https://plotly.com/python/getting-started/#jupyterlab-support) page regarding how to setup JupyterLab, JupyterLab extensions ([Node.js](https://nodejs.org/en/) is required). 
+
+Once you have finished all JupyterLab installation processes, please follow step 5 in the above [section](#running_notebook) but open the file *jupyterlab_plotly_dapi.ipynb* instead. 
+
+![Figure-5](images/jupyterlab.png "jupyterlab_plotly_dapi notebook")
+
 ## <a id="troubleshooting"></a>Troubleshooting
 
 Sometimes the classic Jupyter Notebook encounters the problem when you close the notebook window and re-open it, your plots render as blank spaces. 
 
-![Figure-5](images/notebook_blank.png "Notebook Blank render when re-open")
+![Figure-6](images/notebook_blank.png "Notebook Blank render when re-open")
 
 You can check if the notebook document **is trusted** on the top-right menu of the notebook application.
 
-![Figure-6](images/notebook_trusted.png "Notebook Trusted")
+![Figure-7](images/notebook_trusted.png "Notebook Trusted")
 
 Please click that button to enable JavaScript for display in this notebook.
 
-![Figure-7](images/notebook_trusted_result.gif "Notebook Trusted resolve")
+![Figure-8](images/notebook_trusted_result.gif "Notebook Trusted resolve")
 
 As a last resort, you can "Restart & Clear Output" from the Kernel menu and rerun your notebook. You can find more detail on [Jupyter Classic Notebook Problems](https://plotly.com/python/troubleshooting/#jupyter-classic-notebook-problems) and [Troubleshooting](https://plotly.com/python/troubleshooting/#) pages.
 
