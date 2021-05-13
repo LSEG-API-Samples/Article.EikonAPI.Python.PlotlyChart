@@ -18,7 +18,7 @@ This example project demonstrates how to use the Plotly Python library to plot v
 
 [Plotly Python](https://plotly.com/python/) is a [free](https://plotly.com/python/is-plotly-free/) and [open source](https://github.com/plotly/plotly.py) interactive graphing library for Python. The library is built on top of [plotly.js](https://plotly.com/javascript/) JavaScript library ([GitHub](https://github.com/plotly/plotly.js)). Both Plotly Python and Plotly JavaScript are part of [Plotly](https://plotly.com/)'s Dash and Chart Studio applications suites which provide interactively, scientific data visualization libraries/solutions for Data Scientists and Enterprise. 
  
-This project will focus on the Plotly Python open-source library version **4.14.3** only. 
+This project will focus on the Plotly Python open-source library versions **4.14.3** and **4.5.2** (In the CodeBook application). 
 
 ```
 import plotly.express as px
@@ -40,7 +40,7 @@ If you are not familiar with Eikon Data API or Python, the following resources a
 - [Eikon Data API Quick Start](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start).
 
 *Note*:
-- This project is based on Eikon Data API versions **1.1.10**.
+- This project is based on Eikon Data API versions **1.1.10** and **1.1.6.post3** (In the CodeBook application).
 - Pleases see [Eikon Data API Usage and Limits Guideline](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/documentation#eikon-data-api-usage-and-limits-guideline) regarding the API data coverage and data limit. 
 
 ## <a id="prerequisite"></a>Prerequisite
@@ -59,10 +59,11 @@ Please contact your Refinitiv's representative to help you to access Refinitiv W
 This example project contains the following files and folders
 1. *notebook/plotly_dapi.ipynb*: The example Classic Jupyter Notebook application file.
 2. *notebook/jupyterlab_plotly_dapi.ipynb*: The example JupyterLap application file.
-3. *requirements.txt*: The project dependencies configuration file.
-4. *images*: Project images folder.
-5. *LICENSE.md*: Project's license file.
-6. *README.md*: Project's README file.
+3. *notebook/codebook_plotly_dapi.ipynb*: The example CodeBook application file.
+4. *requirements.txt*: The project dependencies configuration file.
+5. *images*: Project images folder.
+6. *LICENSE.md*: Project's license file.
+7. *README.md*: Project's README file.
 
 ## <a id="eikon_setup"></a>Eikon Data API Setup
 
@@ -115,6 +116,29 @@ Please refer to [Plotly Python - JupyterLab Support](https://plotly.com/python/g
 Once you have finished all JupyterLab installation processes, please follow step 5 in the above [section](#running_notebook) but open the file *jupyterlab_plotly_dapi.ipynb* instead. 
 
 ![Figure-5](images/jupyterlab.png "jupyterlab_plotly_dapi notebook")
+
+## <a id="running_codebook"></a>How to run this example with the CodeBook
+
+If you are [Refinitiv Workspace](https://www.refinitiv.com/en/products/refinitiv-workspace) or [Eikon](https://www.refinitiv.com/en/products/eikon-trading-software) user, you can access [*CodeBook*](https://www.refinitiv.com/en/products/codebook), the cloud-hosted Jupyter Notebook development environment for Python scripting from the application. The CodeBook is natively available in Refinitiv Workspace and Eikon as an app (**no installation required!!**), providing access to Refinitiv APIs that are already pre-installed on the cloud.
+
+The CodeBook also contains Plotly *version 4.5.2*. You can upload the *codebook_plotly_dapi.ipynb* notebook application to the CodeBook with the following steps:
+
+1. In the Eikon/Workspace application, search for the ```CodeBook``` (or ```CODEBK```).
+
+    ![Figure-6](images/codebook_1.png "CodeBook application")
+2. Once the CodeBook finished initialize, create a new folder name *plotly*
+
+    ![Figure-7](images/codebook_2.png "Create new folder")
+
+    ![Figure-8](images/codebook_3.png "Create new folder name plotly")
+3. Enter the plotly folder, and click the upload button and select  *codebook_plotly_dapi.ipynb* notebook file.
+
+    ![Figure-9](images/codebook_4.png "Upload Notebook")
+4. Then run through each cell of the Notebook application
+
+    ![Figure-9](images/codebook_5.png "Notebook upload success")
+
+Please see more detail regarding the CodeBook app in this [Use Eikon Data API or RDP Library in Python in CodeBook on Web Browser article](https://developers.refinitiv.com/en/article-catalog/article/use-eikon-data-api-or-rdp-library-python-codebook-web-browser).
 
 ## <a id="troubleshooting"></a>Troubleshooting
 
