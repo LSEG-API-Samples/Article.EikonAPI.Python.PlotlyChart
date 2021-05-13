@@ -53,7 +53,7 @@ This example requires the following dependencies software and libraries.
 *Note:* 
 - This Project has been qualified with Python version 3.8.8 and Conda version 4.10.1
 
-Please contact your Refinitiv's representative to help you to access Refinitiv Workspace/Eikon credentials. You can generate/manage the AppKey from the  [AppKeyGenerator website](https://emea1.apps.cp.thomsonreuters.com/apps/AppkeyGenerator) or AppKey Generator tool in the Eikon Desktop/Refinitiv Workspace application. 
+Please contact your Refinitiv's representative to help you to access Refinitiv Workspace/Eikon credentials. You can generate/manage the AppKey by follow the steps in [Eikon Data API Quick Start](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start) page.
 
 ## <a id="application_files"></a>Application Files
 This example project contains the following files and folders
@@ -67,8 +67,6 @@ This example project contains the following files and folders
 ## <a id="eikon_setup"></a>Eikon Data API Setup
 
 Please follow a step-by-step guide to set up your Eikon Data API and your AppKey in [Eikon Data API Quick Start page](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start). 
-
-Please note that you can also create your Appkey via [AppKey Generator website](https://amers1.apps.cp.thomsonreuters.com/apps/AppkeyGenerator).
 
 ## <a id="running_notebook"></a>How to run this example with the Classic Jupyter Notebook
 
@@ -96,7 +94,7 @@ The first step is to unzip or download the example project folder into a directo
 6. Once the dependencies installation process success,Go to the project's notebook folder. and create a file name ```credential.cfg``` with the following content.
     ```
     [workspace]
-    app_id = YOUR_APP_ID_HERE
+    app_key = YOUR_APP_ID_HERE
     ```
 7. Open and log in Refinitiv Workspace/Eikon application with your Workspace/Eikon credential.
 8. In the current Anaconda Prompt, go to the project's notebook folder. Run the following command to start the classic Jupyter Notebook in the notebook folder.
@@ -146,12 +144,12 @@ When compare to the Matplotlib Pyplot (which is the main player in the Charting 
 1. Use a few lines of code to create and customize the graph. 
 2. Provide more than 30 ease-of-use various chart object types for Developers.
 3. Experience Developers can use the low-level chart object types to create a more powerful and flexible chart.
-4. Simplifly documents and example code.
+4. Simplify documents and example code.
 5. Provide a dedicated [paid support program](https://plotly.com/get-pricing/) for both individual and corporate developers.
 
 #### Cons
 1. Some API Interface and installation processes for Classic Jupyter Notebook and Jupyter Lab are different.
-2. Matplotlib Pyplot has larger users based on developer community websites (such as [stackoverflow](https://stackoverflow.com/)). It means a lot of Pyplot questions, problems will be easy to find the answers or solutions than Plotly. 
+2. Matplotlib Pyplot has larger users based on developer community websites (such as [StackOverflow](https://stackoverflow.com/)). It means a lot of Pyplot questions, problems will be easy to find the answers or solutions than Plotly. 
 3. Matplotlib Pyplot has larger documents, tutorials, step-by-step guide resources from both official and user-based websites.
 4. The plots render as blank spaces sometimes when you reopen the classic Jupyter Notebook (see [troubleshooting page](https://plotly.com/python/troubleshooting/#jupyter-classic-notebook-problems))
 
