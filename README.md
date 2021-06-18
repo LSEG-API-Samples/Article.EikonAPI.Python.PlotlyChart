@@ -78,7 +78,7 @@ The first step is to unzip or download the example project folder into a directo
 1. Open Anaconda Prompt and go to the project's folder
 2. Run the following command in the Anaconda Prompt application to create a Conda environment named *plotly_chart* for the project.
     ```
-    (base) $>conda env create --name plotly_chart python=3.8
+    (base) $>conda create --name plotly_chart python=3.8
     ```
 3. Once the environment is created, activate Conda environment named ```plotly_chart``` with this command in Anaconda Prompt.
     ```
