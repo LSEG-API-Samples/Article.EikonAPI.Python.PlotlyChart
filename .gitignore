@@ -3,3 +3,4 @@ internal_dev/
 notebook/credential.cfg
 notebook/.ipynb_checkpoints/
 notebook/internal_dev/
+notebook/plotly_dapi_medium.ipynb
