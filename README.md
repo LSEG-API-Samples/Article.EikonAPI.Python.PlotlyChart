@@ -1,5 +1,5 @@
 # Plotting Financial Data Chart with Plotly Python 
-- Last update: May 2021
+- Last update: June 2021
 - Environment: Windows 
 - Compiler: Conda distribution
 - Prerequisite: Refinitiv Eikon or Refinitiv Workspace application with access to Eikon Data APIs.
@@ -18,13 +18,13 @@ This example project demonstrates how to use the Plotly Python library to plot v
 
 [Plotly Python](https://plotly.com/python/) is a [free](https://plotly.com/python/is-plotly-free/) and [open source](https://github.com/plotly/plotly.py) interactive graphing library for Python. The library is built on top of [plotly.js](https://plotly.com/javascript/) JavaScript library ([GitHub](https://github.com/plotly/plotly.js)). Both Plotly Python and Plotly JavaScript are part of [Plotly](https://plotly.com/)'s Dash and Chart Studio applications suites which provide interactively, scientific data visualization libraries/solutions for Data Scientists and Enterprise. 
  
-This project will focus on the Plotly Python open-source library versions **4.14.3** and **4.5.2** (In the CodeBook application). 
+This project will focus on the Plotly Python open-source library versions **4.14.3**, **5.0.0** and **4.5.2** (In the CodeBook application). 
 
 ```
 import plotly.express as px
 
 fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
-fig.show('notebook')
+fig.show()
 ```
 
 ![Figure-1](images/plotly_example.png "Plotly Example result") 
