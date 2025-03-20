@@ -6,3 +6,5 @@ notebook/internal_dev/
 notebook/plotly_dapi_medium.ipynb
 video/
 notebook/plotly_video_demo.ipynb
+plotly_venv/
+eikon_venv/

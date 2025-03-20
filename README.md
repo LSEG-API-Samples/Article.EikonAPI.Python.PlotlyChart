@@ -1,10 +1,12 @@
 # Plotting Financial Data Chart with Plotly Python 
-- Last update: June 2021
+- Last update: March 2025
 - Environment: Windows 
 - Compiler: Conda distribution
-- Prerequisite: Refinitiv Eikon or Refinitiv Workspace application with access to Eikon Data APIs.
+- Prerequisite:  Workspace application with access to Eikon Data APIs.
 
 ## <a id="overview"></a>Overview
+
+**Update March 2025**: There is a new and improve [LSEG Data Library for Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) (Data Library version 2) available now. Please find more detail on [Essential Guide to the Data Libraries - Generations of Python library (EDAPI, RDP, RD, LD)](https://developers.lseg.com/en/article-catalog/article/essential-guide-to-the-data-libraries) and [Upgrade from using Eikon Data API to the Data library](https://developers.lseg.com/en/article-catalog/article/Upgrade-from-using-Eikon-Data-API-to-the-Data-library) articles.
 
 With the rise of Data Scientists, Financial coders, or Traders (aka Citizen Developers), data visualization is a big part of how to present data, information, and its context to the readers (Financial team, Marketing team, etc.). The good data analysis itself cannot be used with a good graph representation. 
 
@@ -12,7 +14,7 @@ The [Matplotlib Pyplot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyp
 
 There are a lot of others alternative Plotting libraries such as [Seaborn](https://seaborn.pydata.org/) (which is a high-level interface of Matplotlib), [Spotify](https://www.spotify.com/us/home/)'s [Chartify](https://github.com/spotify/chartify), [Bokeh](https://docs.bokeh.org/en/latest/), [Plotly Python](https://plotly.com/python/), etc.
 
-This example project demonstrates how to use the Plotly Python library to plot various types of graphs. The demo application uses Corona Virus Disease (COVID-19) and Financial data from [Eikon Data API](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api) as an example of a dataset.
+This example project demonstrates how to use the Plotly Python library to plot various types of graphs. The demo application uses Corona Virus Disease (COVID-19) and Financial data from [Eikon Data API](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api) as an example of a dataset.
 
 ## <a id="plotly_intro"></a>Introduction to Plotly Python
 
@@ -20,7 +22,7 @@ This example project demonstrates how to use the Plotly Python library to plot v
  
 This project will focus on the Plotly Python open-source library versions **4.14.3**, **5.0.0** and **4.5.2** (In the CodeBook application). 
 
-```
+```python
 import plotly.express as px
 
 fig = px.line(x=["a","b","c"], y=[1,3,2], title="sample figure")
@@ -31,21 +33,24 @@ fig.show()
 
 ## <a id="dapi_intro"></a>Introduction to Eikon Data API
 
-The [Eikon Data API](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api) (aka DAPI) provides access to certain Refinitiv Eikon/Refinitiv Workspace data with seamless workflow with the same data across all applications running on the desktop. The API allows developers to tap into the full breadth of community tools through a modern API with native Python support.
+**Update March 2025**: There is a new and improve [LSEG Data Library for Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) (Data Library version 2) available now. Please find more detail on [Essential Guide to the Data Libraries - Generations of Python library (EDAPI, RDP, RD, LD)](https://developers.lseg.com/en/article-catalog/article/essential-guide-to-the-data-libraries) and [Upgrade from using Eikon Data API to the Data library](https://developers.lseg.com/en/article-catalog/article/Upgrade-from-using-Eikon-Data-API-to-the-Data-library) articles.
+
+The [Eikon Data API](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api) (aka DAPI) provides access to certain Workspace data with seamless workflow with the same data across all applications running on the desktop. The API allows developers to tap into the full breadth of community tools through a modern API with native Python support.
 
 ![Figure-2](images/dapi_overview1.png "Eikon Data API Overview") 
 
 If you are not familiar with Eikon Data API or Python, the following resources are highly recommended to read before you proceed with further steps.
-- [Setting up a Python development environment](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/tutorials#setting-up-a-python-development-environment).
-- [Eikon Data API Quick Start](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start).
+- [Setting up a Python development environment](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/tutorials#setting-up-a-python-development-environment).
+- [Eikon Data API Quick Start](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/quick-start).
 
 *Note*:
 - This project is based on Eikon Data API versions **1.1.10** and **1.1.6.post3** (In the CodeBook application).
-- Pleases see [Eikon Data API Usage and Limits Guideline](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/documentation#eikon-data-api-usage-and-limits-guideline) regarding the API data coverage and data limit. 
+- Pleases see [Eikon Data API Usage and Limits Guideline](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation#eikon-data-api-usage-and-limits-guideline) regarding the API data coverage and data limit. 
 
 ## <a id="prerequisite"></a>Prerequisite
+
 This example requires the following dependencies software and libraries.
-1. Refinitiv Eikon or Refinitiv Workspace application with access to Eikon Data APIs.
+1. LSEG Workspace application with access to Eikon Data APIs.
 2. Python [Anaconda](https://www.anaconda.com/distribution/) or [MiniConda](https://docs.conda.io/en/latest/miniconda.html) distribution/package manager.
 3. [Classic Jupyter Notebook](https://jupyter.readthedocs.io/en/latest/install/notebook-classic.html) or [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html) applications
 4. Internet connection.
@@ -53,25 +58,25 @@ This example requires the following dependencies software and libraries.
 *Note:* 
 - This Project has been qualified with Python version 3.8.8 and Conda version 4.10.1
 
-Please contact your Refinitiv's representative to help you to access Refinitiv Workspace/Eikon credentials. You can generate/manage the AppKey by follow the steps in [Eikon Data API Quick Start](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start) page.
+Please contact your LSEG's representative to help you to access Workspace credentials. You can generate/manage the AppKey by follow the steps in [Eikon Data API Quick Start](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/quick-start) page.
 
 ## <a id="application_files"></a>Application Files
 This example project contains the following files and folders
-1. *notebook/plotly_dapi.ipynb*: The example Classic Jupyter Notebook application file.
-2. *notebook/jupyterlab_plotly_dapi.ipynb*: The example JupyterLap application file.
-3. *notebook/codebook_plotly_dapi.ipynb*: The example CodeBook application file.
-4. *requirements.txt*: The project dependencies configuration file.
-5. *images*: Project images folder.
-6. *LICENSE.md*: Project's license file.
-7. *README.md*: Project's README file.
+
+1. *notebook/jupyterlab_plotly_dapi.ipynb*: The example JupyterLap application file.
+2. *notebook/codebook_plotly_dapi.ipynb*: The example CodeBook application file.
+3. *requirements.txt*: The project dependencies configuration file.
+4. *images*: Project images folder.
+5. *LICENSE.md*: Project's license file.
+6. *README.md*: Project's README file.
 
 ## <a id="eikon_setup"></a>Eikon Data API Setup
 
-Please follow a step-by-step guide to set up your Eikon Data API and your AppKey in [Eikon Data API Quick Start page](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start). 
+Please follow a step-by-step guide to set up your Eikon Data API and your AppKey in [Eikon Data API Quick Start page](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/quick-start). 
 
 ## <a id="running_notebook"></a>How to run this example with the Classic Jupyter Notebook
 
-Please note that the Refinitiv Workspace/Eikon application integrates a Data API proxy that acts as an interface between the Eikon Data API Python library and the Eikon Data Platform. For this reason, the Refinitiv Workspace/Eikon application must be running when you use the Eikon Data API Python library.
+Please note that the Workspace application integrates a Data API proxy that acts as an interface between the Eikon Data API Python library and the Eikon Data Platform. For this reason, the Workspace application must be running when you use the Eikon Data API Python library.
 
 The first step is to unzip or download the example project folder into a directory of your choice, then set up a Conda environment for running the application with the steps below.
 
@@ -97,7 +102,7 @@ The first step is to unzip or download the example project folder into a directo
     [workspace]
     app_key = YOUR_APP_ID_HERE
     ```
-7. Open and log in Refinitiv Workspace/Eikon application with your Workspace/Eikon credential.
+7. Open and log in Workspace application with your Workspace credential.
 8. In the current Anaconda Prompt, go to the project's notebook folder. Run the following command to start the classic Jupyter Notebook in the notebook folder.
     ```
     (plotly_chart) $>notebook>jupyter notebook
@@ -119,7 +124,7 @@ Once you have finished all JupyterLab installation processes, please follow step
 
 ## <a id="running_codebook"></a>How to run this example with the CodeBook
 
-If you are [Refinitiv Workspace](https://www.refinitiv.com/en/products/refinitiv-workspace) or [Eikon](https://www.refinitiv.com/en/products/eikon-trading-software) user, you can access [*CodeBook*](https://www.refinitiv.com/en/products/codebook), the cloud-hosted Jupyter Notebook development environment for Python scripting from the application. The CodeBook is natively available in Refinitiv Workspace and Eikon as an app (**no installation required!!**), providing access to Refinitiv APIs that are already pre-installed on the cloud.
+If you are [Workspace](https://www.lseg.com/en/data-analytics/products/workspace) user, you can access [*CodeBook*](https://www.lseg.com/en/data-analytics/products/codebook), the cloud-hosted Jupyter Notebook development environment for Python scripting from the application. The CodeBook is natively available in  Workspace and Eikon as an app (**no installation required!!**), providing access to LSEG APIs that are already pre-installed on the cloud.
 
 The CodeBook also contains Plotly *version 4.5.2*. You can upload the *codebook_plotly_dapi.ipynb* notebook application to the CodeBook with the following steps:
 
@@ -138,7 +143,7 @@ The CodeBook also contains Plotly *version 4.5.2*. You can upload the *codebook_
 
     ![Figure-9](images/codebook_5.png "Notebook upload success")
 
-Please see more detail regarding the CodeBook app in this [Use Eikon Data API or RDP Library in Python in CodeBook on Web Browser article](https://developers.refinitiv.com/en/article-catalog/article/use-eikon-data-api-or-rdp-library-python-codebook-web-browser).
+Please see more detail regarding the CodeBook app in this [Use Eikon Data API or RDP Library in Python in CodeBook on Web Browser article](https://developers.lseg.com/en/article-catalog/article/use-eikon-data-api-or-rdp-library-python-codebook-web-browser).
 
 ## <a id="troubleshooting"></a>Troubleshooting
 
@@ -178,25 +183,29 @@ When compare to the Matplotlib Pyplot (which is the main player in the Charting 
 4. The plots render as blank spaces sometimes when you reopen the classic Jupyter Notebook (see [troubleshooting page](https://plotly.com/python/troubleshooting/#jupyter-classic-notebook-problems))
 
 
-At the same time, the [Eikon Data API](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api) lets developers rapidly access Refinitiv Eikon/Refinitiv Workspace data and our latest platform capabilities with a few lines of code that easy to understand and maintain.
+At the same time, the [Eikon Data API](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api) lets developers rapidly access Workspace data and our latest platform capabilities with a few lines of code that easy to understand and maintain.
 
 ## <a id="references"></a>References
 
 You can find more detail regarding the Plotly, Eikon Data APIs, and related technologies from the following resources:
-* [Refinitiv Eikon Data API page](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api) on the [Refinitiv Developer Community](https://developers.refinitiv.com/) web site.
-* [Plotly Official page](https://plotly.com/).
-* [Plotly Python page](https://plotly.com/python/).
-* [Plotly GitHub page](https://github.com/plotly/plotly.py)
-* [Plotly Express page](https://plotly.com/python/plotly-express/)
-* [Plotly Graph Objects page](https://plotly.com/python/graph-objects/)
-* [Creating and Updating Figures in Python page](https://plotly.com/python/creating-and-updating-figures/#updating-figures)
-* [Plotly Figure API reference page](https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html)
-* [4 Reasons Why I’m Choosing Plotly as My Main Visualization Library](https://towardsdatascience.com/4-reasons-why-im-choosing-plotly-as-the-main-visualization-library-dc4a961a402f)
-* [Eikon Data API Quick Start Guide page](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/quick-start).
-* [Eikon Data API Tutorial page](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/tutorials).
-* [Python Quants Video Tutorial Series for Eikon API](https://community.developers.refinitiv.com/questions/37865/announcement-new-python-quants-video-tutorial-seri.html).
-* [Eikon Data APY Python Reference Guide](https://developers.refinitiv.com/en/api-catalog/eikon/eikon-data-api/documentation#eikon-data-ap-is-for-python-reference-guide).
-* [Eikon Data API Troubleshooting article](https://developers.refinitiv.com/en/article-catalog/article/eikon-data-api-python-troubleshooting-refinitiv).
-* [Get Corona Virus Cases Latest And Time-series Statistic with Eikon Data API(Python) example](https://github.com/Refinitiv-API-Samples/Article.EikonAPI.Python.CoronavirusStatistic)
+
+- [LSEG Data Library for Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) on the [LSEG Developer Community](https://developers.lseg.com/) website.
+- [Eikon Data API page](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api).
+- [Essential Guide to the Data Libraries - Generations of Python library (EDAPI, RDP, RD, LD)](https://developers.lseg.com/en/article-catalog/article/essential-guide-to-the-data-libraries) article.
+- [Upgrade from using Eikon Data API to the Data library](https://developers.lseg.com/en/article-catalog/article/Upgrade-from-using-Eikon-Data-API-to-the-Data-library) article.
+- [Plotly Official page](https://plotly.com/).
+- [Plotly Python page](https://plotly.com/python/).
+- [Plotly GitHub page](https://github.com/plotly/plotly.py)
+- [Plotly Express page](https://plotly.com/python/plotly-express/)
+- [Plotly Graph Objects page](https://plotly.com/python/graph-objects/)
+- [Creating and Updating Figures in Python page](https://plotly.com/python/creating-and-updating-figures/#updating-figures)
+- [Plotly Figure API reference page](https://plotly.com/python-api-reference/generated/plotly.graph_objects.Figure.html)
+- [4 Reasons Why I’m Choosing Plotly as My Main Visualization Library](https://towardsdatascience.com/4-reasons-why-im-choosing-plotly-as-the-main-visualization-library-dc4a961a402f)
+- [Eikon Data API Quick Start Guide page](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/quick-start).
+- [Eikon Data API Tutorial page](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/tutorials).
+- [Python Quants Video Tutorial Series for Eikon API](https://community.developers.refinitiv.com/questions/37865/announcement-new-python-quants-video-tutorial-seri.html).
+- [Eikon Data APY Python Reference Guide](https://developers.lseg.com/en/api-catalog/eikon/eikon-data-api/documentation#eikon-data-ap-is-for-python-reference-guide).
+- [Eikon Data API Troubleshooting article](https://developers.lseg.com/en/article-catalog/article/eikon-data-api-python-troubleshooting-refinitiv).
+- [Get Corona Virus Cases Latest And Time-series Statistic with Eikon Data API(Python) example](https://github.com/LSEG-API-Samples/Article.EikonAPI.Python.CoronavirusStatistic)
 
 For any question related to this example or Eikon Data API, please use the Developers Community [Q&A Forum](https://community.developers.refinitiv.com/spaces/92/eikon-scripting-apis.html).
