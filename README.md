@@ -208,4 +208,4 @@ You can find more detail regarding the Plotly, Eikon Data APIs, and related tech
 - [Eikon Data API Troubleshooting article](https://developers.lseg.com/en/article-catalog/article/eikon-data-api-python-troubleshooting-refinitiv).
 - [Get Corona Virus Cases Latest And Time-series Statistic with Eikon Data API(Python) example](https://github.com/LSEG-API-Samples/Article.EikonAPI.Python.CoronavirusStatistic)
 
-For any question related to this example or Eikon Data API, please use the Developers Community [Q&A Forum](https://community.developers.refinitiv.com/spaces/92/eikon-scripting-apis.html).
+For any question related to this example or Eikon Data API, please use the Developers Community [Q&A Forum](https://community.developers.refinitiv.com).
