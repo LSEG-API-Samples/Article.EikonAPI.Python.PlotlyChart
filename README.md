@@ -182,7 +182,7 @@ At the same time, the [Data Library for Python](https://developers.lseg.com/en/a
 
 ## <a id="references"></a>References
 
-You can find more detail regarding the Plotly, Eikon Data APIs, and related technologies from the following resources:
+You can find more detail regarding the Plotly, Data Library, and related technologies from the following resources:
 
 - [LSEG Data Library for Python](https://developers.lseg.com/en/api-catalog/lseg-data-platform/lseg-data-library-for-python) on the [LSEG Developer Community](https://developers.lseg.com/) website.
 - [Essential Guide to the Data Libraries - Generations of Python library (EDAPI, RDP, RD, LD)](https://developers.lseg.com/en/article-catalog/article/essential-guide-to-the-data-libraries) article.
